@@ -14,6 +14,7 @@ A curated list of awesome .NET Performance books, courses, trainings, conference
 		- [Benchmarking](#benchmarking)
 		- [JIT Optimizations](#jit-optimizations)
 		- [Refs](#refs)		
+		- [Threading](#threading)
 
 ## Books
 
@@ -27,6 +28,7 @@ A curated list of awesome .NET Performance books, courses, trainings, conference
 * [High-Performance Windows Store Apps](https://www.amazon.com/dp/0735682631) by Brian Rasmussen
 * [Customizing the Microsoft® .NET Framework Common Language Runtime](https://www.amazon.com/dp/0735619883) by Steven Pratschner
 * [Under the Hood of .NET Memory Management](https://www.red-gate.com/library/under-the-hood-of-net-memory-management) by Chris Farrell and Nick Harrison 
+* [Functional Concurrency in .NET](https://www.manning.com/books/functional-concurrency-in-dotnet) by Riccardo Terrell
 
 ## Video Courses
 
@@ -50,12 +52,29 @@ A curated list of awesome .NET Performance books, courses, trainings, conference
 
 ## Conference talks
 
-* [Safe Systems Programming in C# and .NET](https://www.infoq.com/presentations/csharp-systems-programming) by Joe Duffy
-* [Performance Optimizations in the Wild](https://vimeo.com/171927596) by Oren Eini (Ayende)
-* [Lessons in Extreme .NET Performance](https://www.infoq.com/presentations/bing-net-performance) by Ben Watson
-* [Performance and How to Measure It](https://www.infoq.com/presentations/dot-net-performance) by Matt Warren
-* [Making .NET applications faster](https://www.youtube.com/watch?v=jz3SvJhdtEw) by Sasha Goldshtein
-* [The Vector in Your CPU: Exploiting SIMD for Superscalar Performance](https://www.youtube.com/watch?v=WeJ8b3WRSmM) by Sasha Goldshtein
+Sorted from newest to oldest:
+* 2017
+	* [What's new for performance in .NET Core 2.0](https://www.youtube.com/watch?v=eOdhWTX3Ajk) by Ben Adams (2017.11.09, CORESTART 2.0)
+	* [State of the .NET Performance](https://www.youtube.com/watch?v=CSPSvBeqJ9c) by Adam Sitnik (2017.07.05, NDC)
+	* [Look Mommy, No GC!](https://www.youtube.com/watch?v=G49baWvzCOI) by Dina Goldshtein (2017.03.23, NDC)
+	* [Squeezing the Hardware to Make Performance Juice](https://www.youtube.com/watch?v=5jKLVGI3B4g) by Sasha Goldshtein (2017.03.17, DotNext)
+	* [Performance tuning Stack Overflow tags](https://www.youtube.com/watch?v=bd5WYql5vlg) by Marco Cecconi (2017.03.17, DotNext)
+	* [Multithreading Deep Dive](https://www.youtube.com/watch?v=z2QYa2RW9c8) by Gael Fraiteur (2017.03.17, DotNext)
+	* [Stack Overflow — It's all about performance!](https://www.youtube.com/watch?v=9_pluQPfbBk) by Marco Cecconi (2017.03.17, DotNext)
+	* [ETW — Monitor Anything, Anytime, Anywhere](https://www.youtube.com/watch?v=s213p-zB7G4) by Dina Goldshtein (2017.03.17, DotNext)
+	* [Exceptional Exceptions in .NET](https://youtu.be/U92Ts53win4?t=1786) by Adam Sitnik (2017.03.17, DotNext)
+* 2016
+	* [PerfView: Measure and Improve Your App's Performance For Free](https://www.youtube.com/watch?v=eX644hod65s) by Sasha Goldshtein (2016.11.02, DotNext)
+	* [The C++ and CLR Memory Models](https://www.youtube.com/watch?v=6wZVpg2SyJQ) by Sasha Goldshtein (2016.11.02, DotNext)
+	* [Safe Systems Programming in C# and .NET](https://www.infoq.com/presentations/csharp-systems-programming) by Joe Duffy (2016.08.20, QCon)
+	* [ASP.NET Core Kestrel: Adventures in building a fast web server](https://www.youtube.com/watch?v=kej3YJDMAW4) by Damian Edwards & David Fowler (2016.08.12, NDC)
+	* [Performance and How to Measure It](https://www.infoq.com/presentations/dot-net-performance) by Matt Warren (2016.07.28, ProgSCon)
+	* [Performance Optimizations in the Wild](https://vimeo.com/171927596) by Oren Eini (Ayende) (2016.06.23, NDC)
+	* [The Vector in Your CPU: Exploiting SIMD for Superscalar Performance](https://www.youtube.com/watch?v=WeJ8b3WRSmM) by Sasha Goldshtein (2016.04.19, DotNext)
+	* [Lessons in Extreme .NET Performance](https://www.infoq.com/presentations/bing-net-performance) by Ben Watson (2016.03.13, QCon)
+* Older
+	* [Making .NET applications faster](https://www.youtube.com/watch?v=jz3SvJhdtEw) by Sasha Goldshtein (2015.10.30, DevWeek)
+	* [The zen of async: Best practices for best performance](https://channel9.msdn.com/Events/Build/BUILD2011/TOOL-829T) by Stephen Toub (2011.09.13, Build)
 
 ## Blogs
 
@@ -66,6 +85,7 @@ A curated list of awesome .NET Performance books, courses, trainings, conference
 * [Alexandre Mutel aka xoofx](http://xoofx.com/blog)
 * [Jack Mott aka PerlinMandleBro](https://jackmott.github.io)
 * [Vladimir Sadov](http://mustoverride.com/)
+* [Adam Sitnik](http://adamsitnik.com)
 
 ## Inspiring Open Source Contributors
 
@@ -94,7 +114,13 @@ A curated list of awesome .NET Performance books, courses, trainings, conference
 * [markdig](https://github.com/lunet-io/markdig) - Markdig is a fast, powerful, CommonMark compliant, extensible Markdown processor for .NET.
 * [Wire](https://github.com/AsynkronIT/Wire) - A high performance polymorphic serializer for the .NET framework.
 * [Disruptor-Net](https://github.com/disruptor-net/Disruptor-net) - .NET port of LMAX Disruptor, a faster alternative to BlockingCollection.
+* [DryIoc](https://bitbucket.org/dadhi/dryioc/overview) - For the past years a [fastest](http://www.palmmedia.de/blog/2011/8/30/ioc-container-benchmark-performance-comparison) Dependency Injection library without sacrificing on [functionality](http://featuretests.apphb.com/DependencyInjection.html).
 * [SimpleInjector](https://github.com/simpleinjector/SimpleInjector) - Fast Dependency Injection library that promotes best practice to steer developers towards the pit of success.
+* [NativeInterop](https://bitbucket.org/frank_niemeyer/nativeinterop) - Generic pointers and native 64-bit arrays for .NET.
+* [MPMCQueue.NET](https://github.com/alexandrnikitin/MPMCQueue.NET) - Bounded multiple producers multiple consumers queue for .NET.
+* [ImTools](https://github.com/dadhi/ImTools) - Immutable persistent collections and helpers designed for [performance](https://gist.github.com/mrange/d6e7415113ebfa52ccb660f4ce534dd4) and simplicity of use.
+* [FastExpressionCompiler](https://github.com/dadhi/FastExpressionCompiler) - Fast [Expression Trees](https://msdn.microsoft.com/en-us/library/mt654263.aspx) compiler to delegate to compensate for slow `Expression.Compile()`.
+* [Spreads](https://github.com/Spreads/Spreads) - "Series and Panels for Real-time and Exploratory Analysis of Data Streams", a library for fast time series incremental calculations + SIMD-optimized byte-shuffling/LZ4/Zstd compression using [Blosc](https://github.com/Blosc/c-blosc/) library.
 
 ## Article series
 
@@ -110,8 +136,16 @@ A curated list of awesome .NET Performance books, courses, trainings, conference
 * [On ‘stackalloc’ Performance and The Large Object Heap](http://blogs.microsoft.co.il/sasha/2013/10/17/on-stackalloc-performance-and-the-large-object-heap/) by Sasha Goldshtein
 * [Micro-Benchmarking Considered Harmful](http://blogs.microsoft.co.il/sasha/2009/05/08/micro-benchmarking-considered-harmful/) by Sasha Goldshtein
 * [On Measuring Performance](http://blogs.microsoft.co.il/sasha/2007/12/27/on-measuring-performance/) by Sasha Goldshtein
+* [Performance exercise: Minimum](http://aakinshin.net/en/blog/dotnet/perfex-min/) by Andrey Akinshin
+* [Performance exercise: Division](http://aakinshin.net/en/blog/dotnet/perfex-div/) by Andrey Akinshin
+* [Measuring Performance Improvements in .NET Core with BenchmarkDotNet (Part 1)](http://aakinshin.net/blog/post/stephen-toub-benchmarks-part1/) by Andrey Akinshin
+
+### Investigations
+
+[High-performance .NET by example: Filtering bot traffic](https://alexandrnikitin.github.io/blog/high-performance-dotnet-by-example/) by Alexandr Nikitin
 
 ### JIT Optimizations
+* [RyuJIT Tutorial](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/ryujit-tutorial.md) by Carol Eidt
 * [JIT Optimizations](http://www.codeproject.com/Articles/25801/JIT-Optimizations) by Sasha Goldshtein
 * [JIT Optimizations, Inlining, and Interface Method Dispatching (Part 1 of N)](http://blogs.microsoft.co.il/sasha/2007/02/27/jit-optimizations-inlining-and-interface-method-dispatching-part-1-of-n/) by Sasha Goldshtein
 * [JIT Optimizations, Inlining, and Interface Method Dispatching (Part 2 of N)](http://blogs.microsoft.co.il/sasha/2007/08/12/jit-optimizations-inlining-and-interface-method-dispatching-part-2-of-n/) by Sasha Goldshtein
@@ -129,6 +163,10 @@ A curated list of awesome .NET Performance books, courses, trainings, conference
 * [RyuJIT RC and constant folding](http://aakinshin.net/en/blog/dotnet/ryujit-rc-and-constant-folding/) by Andrey Akinshin
 * [A story about JIT-x86 inlining and starg](http://aakinshin.net/en/blog/dotnet/inlining-and-starg/) by Andrey Akinshin
 * [LegacyJIT-x86 and first method call](http://aakinshin.net/en/blog/dotnet/legacyjitx86-and-first-method-call/) by Andrey Akinshin
+* [Do PDB Files Affect Performance?](http://devcenter.wintellect.com/jrobbins/do-pdb-files-affect-performance) by John Robbins
+* [What does the optimize switch do?](https://blogs.msdn.microsoft.com/ericlippert/2009/06/11/what-does-the-optimize-switch-do/) by Eric Lippert
+* [Hoisting in .NET Explained (part 1)](https://alexandrnikitin.github.io/blog/hoisting-in-net-explained/) by Alexandr Nikitin 
+* [Hoisting in .NET Examples (part 2)](https://alexandrnikitin.github.io/blog/hoisting-in-net-examples/) by Alexandr Nikitin
 
 ### Refs
 * [ref returns are not pointers](http://mustoverride.com/refs-not-ptrs/) by Vladimir Sadov
@@ -136,3 +174,12 @@ A curated list of awesome .NET Performance books, courses, trainings, conference
 * [Local variables cannot be returned by reference](http://mustoverride.com/ref-returns-and-locals/) by Vladimir Sadov
 * [Safe to return rules for ref returns](http://mustoverride.com/safe-to-return/) by Vladimir Sadov
 * [Why ref locals allow only a single binding?](http://mustoverride.com/ref-locals_single-assignment/) by Vladimir Sadov
+* [ref returns and locals](http://adamsitnik.com/ref-returns-and-ref-locals/) by Adam Sitnik
+
+### Threading
+* [Threading in C#](http://www.albahari.com/threading/) by Joseph Albahari
+
+### Memory
+* [Pooling large arrays with ArrayPool](http://adamsitnik.com/Array-Pool/) by Adam Sitnik
+* [Value Types vs Reference Types](http://adamsitnik.com/Value-Types-vs-Reference-Types/) by Adam Sitnik
+* [Span](http://adamsitnik.com/Span/) by Adam Sitnik
